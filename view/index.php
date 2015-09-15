@@ -1,16 +1,20 @@
-<!Docpype html>
+<!doctype html>
 <html>
 <head>
-<title>������� �������� �����</title>
-<meta charset="UTF-8">
-
+<meta charset="utf-8">
+<title>Мой блог</title>
 </head>
 <body>
-	<?php foreach ($news as $article); ?>
+	<a>Главная</a> |
+	<a href="./add.php">Добавить статью</a> |
+	<a href="./editor.php">Консоль редактора</a> 
+	<hr>
+	<?php foreach ($news as $article ): ?>
 	<article>
 		<h1><?=$article['title']; ?></h1>
-		<div><?=$article['text']; ?></div>
+		<div><?=mb_substr($article['text'], 0, 12, 'utf-8'). '     ' ?><a href="./article.php?id=<?=$article['id'] ?>"> читать далее...</a></div>
 	</article>
+	<?php endforeach; ?>
 
 
 </body>

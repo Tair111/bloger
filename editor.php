@@ -3,6 +3,12 @@
 
 include_once __DIR__ . '/models/news.php';
 
+if (isset($_GET['id']))
+{
+	$id = $_GET['id'];
+	delArticle($id);
+}
+
 $news = getAll();
 
-include_once __DIR__ . '/view/index.php';
+include_once __DIR__ . '/view/editor.php';
