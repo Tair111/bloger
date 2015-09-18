@@ -17,6 +17,7 @@
 	</article>
 	<?php endforeach; ?>
 
-
+	<hr>
+	<footer>
 </body>
 </html>

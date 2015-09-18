@@ -33,6 +33,7 @@
 	<?=$msg; ?>
 	</form>
 
-
+	<hr>
+	<footer>
 </body>
 </html>

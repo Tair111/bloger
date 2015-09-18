@@ -8,7 +8,7 @@
 	<a href="../index.php">Главная</a> |
 	<a>Добавить статью</a> |
 	<a href="./editor.php">Консоль редактора</a> 
-	<br>
+	<hr>
 	<br>
 	<form action="../add.php" method="post" enctype="multipart/form-date" />
 	Название:
@@ -26,7 +26,9 @@
 	</form>
 	
 	<?=$msg ?>
-
+	
+	<hr>
+	<footer>
 
 </body>
 </html>

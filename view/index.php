@@ -15,7 +15,8 @@
 		<div><?=mb_substr($article['text'], 0, 12, 'utf-8'). '     ' ?><a href="./article.php?id=<?=$article['id'] ?>"> читать далее...</a></div>
 	</article>
 	<?php endforeach; ?>
-
-
+	
+	<hr>
+	<footer>
 </body>
 </html>

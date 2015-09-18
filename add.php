@@ -1,7 +1,7 @@
 <?php 
 //header("Content-Type: text/html; charset=utf-8");
 
-include_once __DIR__ . '/models/news.php';
+include_once __DIR__ . '/models/ArticleClass.php';
 
 if(isset($_POST['add']))
 {
@@ -9,7 +9,8 @@ if(isset($_POST['add']))
 	{
 		$title = $_POST['title'];
 		$text = $_POST['text'];
-		setArticle($title, $text);
+		$model = new ArticleClass();
+		$model->setArticle($title, $text);
 		$msg = 'Статья добавлена';
 	}else{
 		$title = $_POST['title'];

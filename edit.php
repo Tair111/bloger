@@ -1,12 +1,15 @@
 <?php 
 //header("Content-Type: text/html; charset=utf-8");
 
-include_once __DIR__ . '/models/news.php';
+include_once __DIR__ . '/models/ArticleClass.php';
 
+	$model = new ArticleClass();
+	
 if (isset($_GET['id']))
 {
 	$id = $_GET['id'];
-	$new_article = getOne($id);
+	
+	$new_article = $model->getOne($id);
 }
 
 if(isset($_POST['edit']))
@@ -16,11 +19,11 @@ if(isset($_POST['edit']))
 		$title = $_POST['title'];
 		$text = $_POST['text'];
 		$id = $_POST['id'];
-		updateArticle($title, $text, $id);
+		$model->updateArticle($title, $text, $id);
 		$msg = 'Статья изменена';
-		$new_article = getOne($id);
+		$new_article = $model->getOne($id);
 	}else{
-		$new_article = getOne($id);
+		$new_article = $model->getOne($id);
 		$msg = 'Заполните все графы';
 		}
 }

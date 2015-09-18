@@ -15,6 +15,8 @@
 		<br>
 		<div><?=$article['text']; ?></div>
 	</article>
-	
+
+	<hr>
+	<footer>	
 </body>
 </html>
