@@ -1,12 +1,18 @@
 <?php 
-//header("Content-Type: text/html; charset=utf-8");
 include_once __DIR__ . '/boot.php';
 
+/*
+$route = $_GET['r'];
 
-$model = new ArticleClass();
-//$news = $model->getAll();
+$routeParts = explode('/', $route);
+$controllerClassName = ucfirst($routeParts[0]) . 'Controller';
+$actionName = $routeParts[1];
 
-$view = new View();
-$view->news = $model->getAll();
-$view->display('../view/index.php');
+$Controller = new $controllerClassName();
+$Controller->action($actionName);
+*/
 
+$router = new Route();
+$controllerClassName = ucfirst($router->controller) . 'Controller';
+$Controller = new $controllerClassName();
+$Controller->action($router->action);

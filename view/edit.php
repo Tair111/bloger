@@ -5,13 +5,13 @@
 <title>Добавление статьи</title>
 </head>
 <body>
-	<a href="../index.php">Главная</a> |
-	<a href="./add.php">Добавлние статьи</a> |
-	<a href="./editor.php">Консоль редакора</a> 
+	<a href="../index.php?r=news/all">Главная</a> |
+	<a href="./index.php?r=news/add">Добавлние статьи</a> |
+	<a href="./index.php?r=news/editor">Консоль редакора</a> 
 	<hr>
 	<br>
 	<br>
-	<form action="../edit.php" method="post" enctype="multipart/form-date" />
+	<form action="../index.php?r=news/edit" method="post" enctype="multipart/form-date" />
 	Статья №
 	<input type="text" size="1" name="id" value="<?=$new_article['id']; ?>" />
 	<br/>

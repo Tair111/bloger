@@ -5,9 +5,9 @@
 <title>Добавление статьи</title>
 </head>
 <body>
-	<a href="../index.php">Главная</a> |
+	<a href="../index.php?r=news/all">Главная</a> |
 	<a>Добавить статью</a> |
-	<a href="./editor.php">Консоль редактора</a> 
+	<a href="./index.php?r=news/editor">Консоль редактора</a> 
 	<hr>
 	<br>
 	<form action="../add.php" method="post" enctype="multipart/form-date" />

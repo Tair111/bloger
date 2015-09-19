@@ -5,15 +5,15 @@
 <title>Главная страница сайта</title>
 </head>
 <body>
-	<a href="./index.php">Главная</a> |
-	<a href="./add.php">Добавить статью</a> |
+	<a href="./index.php?r=news/all">Главная</a> |
+	<a href="./index.php?r=news/add">Добавить статью</a> |
 	<a>Консоль редактора</a> 
 	<hr>
 	<?php foreach ($news as $article ): ?>
 	<article>
 		<h1><?=$article['title']; ?></h1>
-		<a href="./edit.php?id=<?=$article['id'];?>">Редактировать</a> |
-		<a href="./editor.php?id=<?=$article['id'];?>">Удалить</a>
+		<a href="./index.php?r=news/edit&id=<?=$article['id'];?>">Редактировать</a> |
+		<a href="./index.php?r=news/editor&id=<?=$article['id'];?>">Удалить</a>
 	</article>
 	<?php endforeach; ?>
 
