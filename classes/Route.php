@@ -3,12 +3,13 @@ Class Route
 {
 	public $controller;
 	public $action;
+	public $route;
 	
-	public function __construct()
+	public function __construct($route)
 	{
-		if(isset($_GET['r']))
+		$this->route = $route;
+		if(isset($this->route))
 		{
-			$route = $_GET['r'];
 			$routeParts = explode('/', $route);
 			if(2 == count($routeParts))
 			{
